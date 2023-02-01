@@ -1,0 +1,61 @@
+{
+  animations: [
+    {
+      path: 'sampledata/sunglass_lavender_rose.fbx',
+    },
+  ],
+  materials: [
+    {
+      name: 'body.001',
+      parameters: [
+        {
+          baseColor: [
+            0.98101300000000002,
+            0.56455999999999995,
+            0.84575299999999998,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+      'BoneIndices',
+      'BoneWeights',
+    ],
+    collision: {},
+    file: 'sampledata/sunglass_lavender_rose.fbx',
+    name: 'sunglass_lavender_rose',
+    recenter: 'root',
+  },
+  version: '0.54:2',
+}

@@ -1,0 +1,61 @@
+{
+  animations: [
+    {
+      path: 'sampledata/sunglass_pink.fbx',
+    },
+  ],
+  materials: [
+    {
+      name: 'body.001',
+      parameters: [
+        {
+          baseColor: [
+            0.98101300000000002,
+            0.25547500000000001,
+            0.71329399999999998,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+      'BoneIndices',
+      'BoneWeights',
+    ],
+    collision: {},
+    file: 'sampledata/sunglass_pink.fbx',
+    name: 'sunglass_pink',
+    recenter: 'root',
+  },
+  version: '0.54:2',
+}

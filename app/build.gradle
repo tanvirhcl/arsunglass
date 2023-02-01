@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.hcl.ar"
+        minSdkVersion 24
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    // UI
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10"
+    implementation 'androidx.appcompat:appcompat:1.7.0-alpha01'
+    implementation 'androidx.core:core-ktx:1.10.0-alpha01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.6.0'
+
+    //Sceneform
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.17.1'
+
+    // RecycleView
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+
+    // AR
+    implementation 'com.google.ar:core:1.35.0'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+
+    // Testing
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
+
+
+sceneform.asset('sampledata/sunglass_aero_blue.fbx', 'default',
+                'sampledata/sunglass_aero_blue.sfa', 'src/main/res/raw/sunglass_aero_blue')
+
+sceneform.asset('sampledata/sunglass_black.fbx', 'default',
+                'sampledata/sunglass_black.sfa', 'src/main/res/raw/sunglass_black')
+
+sceneform.asset('sampledata/sunglass_blue_purple.fbx', 'default',
+                'sampledata/sunglass_blue_purple.sfa', 'src/main/res/raw/sunglass_blue_purple')
+
+sceneform.asset('sampledata/sunglass_french_lime.fbx', 'default',
+                'sampledata/sunglass_french_lime.sfa', 'src/main/res/raw/sunglass_french_lime')
+
+sceneform.asset('sampledata/sunglass_lavender_rose.fbx', 'default',
+                'sampledata/sunglass_lavender_rose.sfa', 'src/main/res/raw/sunglass_lavender_rose')
+
+sceneform.asset('sampledata/sunglass_medium_blue.fbx', 'default',
+                'sampledata/sunglass_medium_blue.sfa', 'src/main/res/raw/sunglass_medium_blue')
+
+sceneform.asset('sampledata/sunglass_pink.fbx', 'default',
+                'sampledata/sunglass_pink.sfa', 'src/main/res/raw/sunglass_pink')
+
+sceneform.asset('sampledata/sunglass_purple.fbx', 'default',
+                'sampledata/sunglass_purple.sfa', 'src/main/res/raw/sunglass_purple')
+
+sceneform.asset('sampledata/sunglass_sea_green.fbx', 'default',
+                'sampledata/sunglass_sea_green.sfa', 'src/main/res/raw/sunglass_sea_green')
+
+
+sceneform.asset('sampledata/sunglass_yellow.fbx', 'default',
+                'sampledata/sunglass_yellow.sfa', 'src/main/res/raw/sunglass_yellow')
+
+
+sceneform.asset('sampledata/Sunglasses_01.obj', 'default',
+                'sampledata/sunglasses_01.sfa', 'src/main/res/raw/sunglasses_01')
+
+
+
+
+
+
+
+
