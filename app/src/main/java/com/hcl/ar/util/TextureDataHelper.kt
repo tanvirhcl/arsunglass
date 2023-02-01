@@ -1,21 +1,20 @@
 package com.hcl.ar.util
 
-import android.content.Context
 import com.hcl.ar.R
 import com.hcl.ar.model.MakeupDataModel
-import java.util.*
 import kotlin.collections.HashMap
 
 object TextureDataHelper {
 
-    var textureSection = arrayOf("LIPS","FOUNDATION",/*"EYE"*/)
+    var textureSection = arrayOf("LIPS","FOUNDATION","EYE")
 
 
     fun getTextureMap() : MutableMap<String,MutableList<MakeupDataModel>?> {
+
         val dataMap : MutableMap<String,MutableList<MakeupDataModel>?> = HashMap()
         dataMap[textureSection[0]] = getLipsData()
         dataMap[textureSection[1]] = getFoundationData()
-       // dataMap[textureSection[2]] = getEye(context)
+        dataMap[textureSection[2]] = getEye()
 
         return dataMap
     }
@@ -161,9 +160,42 @@ object TextureDataHelper {
             MakeupDataModel(
                 key = textureSection[2],
                 selection = false,
+                id = R.drawable.eye_bazaar,
+                colorHex = "#937A7B"
+            ),
+            MakeupDataModel(
+                key = textureSection[2],
+                selection = false,
+                id = R.drawable.eye_burnished_brown,
+                colorHex = "#967374"
+            ),
+            MakeupDataModel(
+                key = textureSection[2],
+                selection = false,
+                id = R.drawable.eye_burnt_umber,
+                colorHex = "#7F2E2F"
+            ),
+            MakeupDataModel(
+                key = textureSection[2],
+                selection = false,
+                id = R.drawable.eye_dim_gray,
+                colorHex = "#726263"
+            ),MakeupDataModel(
+                key = textureSection[2],
+                selection = false,
                 id = R.drawable.eye_grey,
-                colorHex = "#8C8E8F"
-            )
+                colorHex = "#9C9D9E"
+            ),MakeupDataModel(
+                key = textureSection[2],
+                selection = false,
+                id = R.drawable.eye_mauve_taupe,
+                colorHex = "#87696A"
+            ),MakeupDataModel(
+                key = textureSection[2],
+                selection = false,
+                id = R.drawable.eye_philippine_gray,
+                colorHex = "#978A8B"
+            ),
         )
     }
 
